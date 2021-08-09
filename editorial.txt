@@ -1,0 +1,61 @@
+Explanation : 
+
+The simple approach to solve this problem would be something like this:
+
+we would create a map where key --> username and value -- > (number of times the username was previously requested)
+
+
+Whenever a username is requested we would first check whether (map[username] == 0) if Yes print "Done!"
+and then increment the count i.e (map[username]++) 
+
+But if the map[username]!=0 we would simply print username appended by count i.e username + to_string(map[username]) and then increment the count
+
+for eg : 
+
+Input:
+
+2
+surajit
+surajit
+
+Output:
+
+Done!
+surajit1
+
+
+Time Complexity: O(n)
+
+
+
+Code:
+
+C++ Code:
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+
+    map<string, int> m;
+    
+    while (n--)
+    {
+        string s;
+        cin >> s;
+ 
+        if (m[s] == 0)
+        {
+            cout << "Done!" << endl;
+            m[s]++;
+        }
+        else
+        {
+            cout << s + to_string(m[s]) << endl;
+            m[s]++;
+        }
+    }
+}
+
