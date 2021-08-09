@@ -78,7 +78,7 @@
 Clone the project
 
 bash
-  git clone https://github.com/kiran11621/Coding-Marshals.git
+  git clone https://github.com/Surajit10/Code-Marshals.git
 
 
 Go to the project directory
